@@ -1,8 +1,8 @@
 # COVID-19 Risk Factor
 
 "There is a growing urgency for these approaches because of the rapid increase in coronavirus literature, making it difficult for the medical community to keep up."[[1]](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge) 
-
 So this project aims to first find out the sentences talking about the risk factor of the COVID-19 form a large number of coronavirus literatures , and then recognize the risk factors in these sentences.
+Advisor: [Pengtao Xie](https://sites.google.com/site/pengtaoxie2008/)
 
 ## 0  Repo introduction
 
