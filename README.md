@@ -40,36 +40,25 @@ For example, from this page [https://www.cdc.gov/coronavirus/2019-ncov/specific-
 
 Finally, we collect these risk factors. 
 
+
 $$
 \begin{array}{l|l}
-
-\text{Kinds of people}  & \text{older adults, pregant women} \\
-
-\\
-
-\text{Kinds of diseases} & \text{lung disease, heart disease, cardiovascular disease, chronic kidney disease, } \\
-
+\text{Kinds of people} & \text{older adults, pregant women} \\\\
+\text{Kinds of diseases} & \text{lung disease, heart disease,cardiovascular disease, chronic kidney disease, } \\
  & \text{coronary heart disease, liver disease, nervous system disease,chronic } \\
  & \text{respiratory disease, coagulation dysfunction} \\
-
 \\
-
 \text{Specific diseases} & \text{diabetes, HIV, cancer, asthma, sepsis, hypertension, arrhythmia, myocardial } \\
-
 \\
-
 \text{Specific substances} & \text{neutrophilia, lymphocytopenia, methylprednisolone, leukocytosis, higher lactate  } \\ 
-& \text{dehydrogenase(LDH), plasma urea, serum creatinine, IL-6,  CD4 cell, CD3 T-cell} \\
-& \text{CD8 T-cell,increased high-sensitivity cardiac troponin, increased high-sensitivity} \\
-& \text{C-reactive protein, d-dimer concentrations, aspartate aminotransferase, alanine } \\
-& \text{aminotransferase} \\
-
-\\
-
+ & \text{dehydrogenase(LDH), plasma urea, serum creatinine, IL-6,  CD4 cell, CD3 T-cell} \\
+ & \text{CD8 T-cell,increased high-sensitivity cardiac troponin, increased high-sensitivity} \\
+ & \text{C-reactive protein, d-dimer concentrations, aspartate aminotransferase, alanine } \\
+& \text{aminotransferase} \\\\
 \text{Other}& \text{medical resources, socioeconomics} \\
-
 \end{array}
 $$
+
 They are only a small part of the risk factors of COVID-19, our goal is to find all risk factors in the CORD-19 dataset, which can't be done by letting a doctor read all the papers and find them.
 
 ## 3  Choose and label sentences
