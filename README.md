@@ -40,24 +40,13 @@ For example, from this page [https://www.cdc.gov/coronavirus/2019-ncov/specific-
 
 Finally, we collect these risk factors. 
 
-
-$$
-\begin{array}{l|l}
-\text{Kinds of people} & \text{older adults, pregant women} \\\\
-\text{Kinds of diseases} & \text{lung disease, heart disease,cardiovascular disease, chronic kidney disease, } \\
- & \text{coronary heart disease, liver disease, nervous system disease,chronic } \\
- & \text{respiratory disease, coagulation dysfunction} \\
-\\
-\text{Specific diseases} & \text{diabetes, HIV, cancer, asthma, sepsis, hypertension, arrhythmia, myocardial } \\
-\\
-\text{Specific substances} & \text{neutrophilia, lymphocytopenia, methylprednisolone, leukocytosis, higher lactate  } \\ 
- & \text{dehydrogenase(LDH), plasma urea, serum creatinine, IL-6,  CD4 cell, CD3 T-cell} \\
- & \text{CD8 T-cell,increased high-sensitivity cardiac troponin, increased high-sensitivity} \\
- & \text{C-reactive protein, d-dimer concentrations, aspartate aminotransferase, alanine } \\
-& \text{aminotransferase} \\\\
-\text{Other}& \text{medical resources, socioeconomics} \\
-\end{array}
-$$
+|                                                     | Risk Factors |
+| ----------------------------------------------------| ----------- |
+| Kinds of people    |older adults, pregant women|
+| Kinds of diseases  |lung disease, heart disease, cardiovascular disease, chronic kidney disease, coronary heart disease, liver disease, nervous system disease, chronic respiratory disease, coagulation dysfunction|
+| Specific diseases  |diabetes, HIV, cancer, asthma, sepsis, hypertension, arrhythmia, myocardial infarction, pneumonia, chronic renal failure, dyspnea, high fever|
+| Specific substances|neutrophilia, lymphocytopenia, methylprednisolone, leukocytosis, higher lactate dehydrogenase (LDH), plasma urea, serum creatinine, IL-6, low CD4 cell count, CD3 T-cell, CD8 T-cell, increased high-sensitivity cardiac troponin, increased high-sensitivity C-reactive protein, D-dimer, aspartate aminotransferase, alanine aminotransferase|
+| Other              |medical resources, socioeconomics|
 
 They are only a small part of the risk factors of COVID-19, our goal is to find all risk factors in the CORD-19 dataset, which can't be done by letting a doctor read all the papers and find them.
 
@@ -107,13 +96,13 @@ Although the sample is a little unbalanced and the number of negative sentences 
 
 Next we applied classifier_3 to all 1,048,575  sentences in CORD-19 dataset. The classifier chose 39150 positive sentences. (in [positive_sent.xlsx](https://github.com/Molv1659/COVID-19-Risk-Factor/blob/master/data/positive_sent.xlsx))There are 4 kinds of sentences among them:
 
-​       S1: good positive sentences
+- S1: good positive sentences
 
-​       S2: sentences that don't contain useful information about risk factor
+- S2: sentences that don't contain useful information about risk factor
 
-​	   S3: sentences that talk about the danger and fast spread of COVID-19
+- S3: sentences that talk about the danger and fast spread of COVID-19
 
-​       S4: sentences that don't talk about risk factors
+- S4: sentences that don't talk about risk factors
 
 S1 and S2 are correctly classified while S3 and S4 are not.
 
@@ -208,7 +197,7 @@ We used BiLSTM + CRF model to do the NER job.  First there is an embedding layer
 
 The model was trained for 5 epoches. Both accuracy and val_accuracy reach 100%. Through the analysis of training and validation loss, we can know that the model has not been overfitted. The NER model works well on train and val set.
 
-But when we applied the model to the positive sentences, we found it only recognizes these risk factors that we used to label the BIO_tag. Because there are limited kinds of entities(37 risk factors we chose in section 2) in the training data, the model will tend to learn to recognize by these specific words and thus cannot recognize new risk factors. 
+But when we applied the model to the positive sentences, we found it only recognizes these risk factors that we used to label the BIO_tag. Because there are limited kinds of entities(41 risk factors we chose in section 2) in the training data, the model will tend to learn to recognize by these specific words and thus cannot recognize new risk factors. 
 
 We cannot label many other kinds of risk factor entities because it's too time-consuming to do it. (And this is exactly what and why we hope to let computers do for us people) So this problem with NER model cannot be solved.
 
