@@ -146,7 +146,7 @@ The length distribution of the answer string is as follows:
 
 72.7% of answers have a string length less than 50, and these answers were composed of noun phrases. Most of those answers are risk factors of high quality.
 
-The remaining 27.3% of the answers whose length is longer than 50 are considered not to have high quality: some answers contain unnecessary information, some positive sentences are too complicated to sum up a short answer.
+The remaining 27.3% of the answers whose length is longer than 50 are considered not to have high quality: some answers contain unnecessary information, some positive sentences are too complicated for the model to sum up a short answer.
 
 ![答案长度分布50内](https://github.com/Molv1659/COVID-19-Risk-Factor/raw/master/pic_for_readme/答案长度分布50内.png)
 
