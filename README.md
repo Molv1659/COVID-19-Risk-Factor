@@ -106,7 +106,7 @@ Next we applied classifier_3 to all 1,048,575  sentences in CORD-19 dataset. The
 
 - S5: sentences talking about risk factor but not of COVID-19
 
-S1 and S2 are rightly classified but we only want S1. S3, S4 and S5 are wrongly classified. We can filter out the S2, S3, S4 in subsequent processing. But if a positive sentences doesn’t contain 'COVID-19', we cannot decide whether it belongs to S1 or S5.
+S1 and S2 are rightly classified but we only want S1. S3, S4 and S5 are wrongly classified. We can filter out the S2, S3, S4 in subsequent processing. But if a positive sentence doesn’t contain 'COVID-19', we cannot decide whether it belongs to S1 or S5.
 
 ## 5  By QA, filtering out part of the sentences and recognizing the risk factors in positive sentences
 
