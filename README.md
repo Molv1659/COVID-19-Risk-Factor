@@ -82,7 +82,7 @@ We have trained 3 classifiers:
 
 |              |                Data                | Accuracy on Val | Acurracy on Test |
 | ------------ | :--------------------------------: | :-------------: | :--------------: |
-| Classifier_1 |     400 P, 1600 (N1, N2 or N3)     |      0.97       |       0.73       |
+| Classifier_1 |     400 P, 1500 (N1, N2 or N3)     |      0.97       |       0.73       |
 | Classifier_2 |           400 P, 1000 N4           |      0.97       |       0.79       |
 | Classifier_3 | 400 P,  500 (N1, N2 or N3), 500 N4 |      0.94       |       0.96       |
 
