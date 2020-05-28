@@ -158,7 +158,26 @@ The length distribution of answers whose length is less than 50 is as above. The
 
 There are 82 kinds of risk factors that occur more than 10 times in CORD-19 data set. Most risk factors occur only once or twice.
 
-[待改：risk factor的展示]
+
+
+| Count of occurrence | Examples                                                     |
+| :------------------ | ------------------------------------------------------------ |
+| [1, 2]              | il - 17, lymphoma, rrti, fipv, hypomethylation, pertussis toxin, arterial pulmonary hypertension, isoflavone synthase gene |
+| [3, 9]              | ace2, bats, steroid, anemia, mutations, depression, temperature, hepatic inflammation, pulmonary hypertension, kidney impairment,congenital heart disease |
+| ≥10                 | pneumonia, sepsis, comorbidities, inflammation, fever, mortality, viral infection, obesity, diabetes, oxidative stress, hypertension, cancer, smoking, critically ill patients, heart failure |
+
+As shown in Table above, risk factors occur 1 or 2 times are medical terminologies that ordinary people are not familiar with or nouns with many adjectives modifying them. Risk factors are noun phrases known to the public and are considered to be of high quality. Risk factors occur more than 10 times can be seen frequently in news reports relevant to COVID-19, such as pneumonia, fever and hypertension. There are some risk factors relevant to COVID-19 whereas not contain useful information also being chosen, such as comorbidities and viral infection. This kind of words usually occur more than 10 times.
+
+Considering the subtle differences may have big influence, we don't combine similar risk factors. For example, risk factors relevant to heart contain 'heart failure', 'congenital heart disease', 'coronary heart disease', 'congestive heart failure', 'left systolic heart failure', 'ischemic heart disease', etc. It's convenient for doctors to choose ones they are really interested in and check the positive sentences containing the risk factors.
+
+We designed a [test set](https://github.com/Molv1659/COVID-19-Risk-Factor/blob/master/data/biobert_QA_COVID19_test_set.xlsx) to test the performance of the QA model. The test set contain 200 sentences talking about risk factors of COVID-19.  To make the evaluation more robust, we obtained 3 answers for each sentences. We use "Exact match" and "(macro-everaged) F1 Score" metrics to evaluate and use the highest one among three. We let our model to choose risk factors of COVID-19 in test set and below is the outcome of our model's performance:
+
+> EM : 0.29
+>
+> F1 score : 0.79
+
+These sentences come from medical papers and are often long and complex, and it's not easy to select the risk factors definitely. A low EM value is expected, and the F1 score is satisfactory, which comfirms the effectiveness and practicability of our QA model.
+
 
 ## Why not use NER?
 
